@@ -43,7 +43,7 @@ export function AddCardModal({visible, setVisible, addCard}:
 
       <Modal.Footer>
         <Button variant="secondary" onClick={hide}>Close</Button>
-        <Button variant="primary" onClick={saveCard}>Save changes</Button>
+        <Button variant="primary" data-testid="save-card-button" onClick={saveCard}>Save changes</Button>
       </Modal.Footer>
     </Modal>)
 }

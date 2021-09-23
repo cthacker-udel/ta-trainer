@@ -53,12 +53,12 @@ export function ControlPanel({ setCard, reveal, answerRevealed, deck, showAddCar
 
   return <Col>
     <h1>Control Panel</h1>
-    <UserList users={users} setUsers={setUsers}></UserList>
-    <Button onClick={setRandomCard} className="m-4">Swap Current Card</Button>
+    <UserList data-testid="user-list" users={users} setUsers={setUsers}></UserList>
+    <Button data-testid="swap-current-card-button" onClick={setRandomCard} className="m-4">Swap Current Card</Button>
     <Button data-testid="reveal-answer-button" onClick={() => reveal(!answerRevealed)} className="m-4">Reveal Answer</Button>
-    <Button onClick={shuffleUsers} className="m-4">Shuffle Users</Button>
-    <Button onClick={save} className="m-4" variant="success">Save</Button>
-    <Button onClick={addNewCard} className="m-4">Add new card</Button>
+    <Button data-testid="shuffle-users-button" onClick={shuffleUsers} className="m-4">Shuffle Users</Button>
+    <Button data-testid="save-button" onClick={save} className="m-4" variant="success">Save</Button>
+    <Button data-testid="add-new-card-button" onClick={addNewCard} className="m-4">Add new card</Button>
 
   </Col>
 }
